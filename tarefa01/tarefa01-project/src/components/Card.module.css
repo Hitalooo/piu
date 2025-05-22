@@ -1,0 +1,23 @@
+.card {
+  cursor: pointer;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.07);
+  text-align: center;
+  padding: 1rem;
+  transition: transform 0.15s;
+}
+.card:hover {
+  transform: scale(1.05);
+}
+.imagem {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.nome {
+  display: block;
+  margin-top: 0.7rem;
+  font-weight: bold;
+}

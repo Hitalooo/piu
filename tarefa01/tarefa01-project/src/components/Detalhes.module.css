@@ -1,0 +1,30 @@
+.detalhes {
+  background: #fff;
+  color: #222;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 32px rgba(0,0,0,0.2);
+  text-align: center;
+  margin: 2rem auto 0 auto;
+}
+.detalhes.dark {
+  background: #222;
+  color: #f6f6f6;
+}
+.imagemGrande {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+}
+.fechar {
+  position: absolute;
+  right: 1.5rem;
+  top: 1.5rem;
+  background: blueviolet;
+  color: inherit;
+  border: none;
+  font-size: 1.4rem;
+  cursor: pointer;
+}

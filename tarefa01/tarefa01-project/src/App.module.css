@@ -1,0 +1,25 @@
+.app {
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  transition: background 0.3s, color 0.3s;
+  display: inline-block;
+  align-items: center;
+  margin: auto;
+  margin-left: 220px;
+  /* GAMBIARRA DAS GRANDES */
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem;
+}
+.light {
+  background: #f6f6f6;
+  color: #222;
+}
+.dark {
+  background: #222;
+  color: #f6f6f6;
+}
