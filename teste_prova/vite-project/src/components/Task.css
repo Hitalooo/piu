@@ -78,3 +78,11 @@
     margin-top: 8px;
   }
 }
+
+.task-actions button.delete-btn {
+  background: #d33;
+}
+
+.task-actions button.delete-btn:hover {
+  background: #a00;
+}

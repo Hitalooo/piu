@@ -1,3 +1,4 @@
+// ... outros imports
 import React, { useState } from "react";
 import tasksData from "./tasks";
 import Task from "./components/Task";
@@ -32,6 +33,11 @@ function App() {
     );
   }
 
+  // NOVA FUNÇÃO PARA APAGAR
+  function handleDeleteTask(id) {
+    setTasks(tasks => tasks.filter(task => task.id !== id));
+  }
+
   function handleToggleTheme() {
     setDarkMode(dark => !dark);
     document.body.classList.toggle("dark", !darkMode);
@@ -50,6 +56,7 @@ function App() {
             task={task}
             onToggle={handleToggleTask}
             onEdit={handleEditTask}
+            onDelete={handleDeleteTask} // NOVO PROP
           />
         ))}
       </Dashboard>

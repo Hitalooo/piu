@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import TaskForm from "./TaskForm";
 import "./Task.css";
 
-export default function Task({ task, onToggle, onEdit }) {
+export default function Task({ task, onToggle, onEdit, onDelete }) {
   const [editing, setEditing] = useState(false);
 
   function handleEdit(data) {
@@ -36,6 +36,9 @@ export default function Task({ task, onToggle, onEdit }) {
         </button>
         <button onClick={() => setEditing(true)}>
           Editar
+        </button>
+        <button onClick={() => onDelete(task.id)} className="delete-btn">
+          Excluir
         </button>
       </div>
     </div>
