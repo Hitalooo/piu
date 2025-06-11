@@ -1,0 +1,26 @@
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #f8f8f8;
+  color: #222;
+  margin: 0;
+  padding: 16px;
+  transition: background 0.3s, color 0.3s;
+}
+
+body.dark {
+  background: #181b20;
+  color: #f5f7fa;
+}
+
+body.dark .task {
+  --task-bg: #23262c;
+  --task-color: #f5f7fa;
+  --desc-color: #d6d6d6;
+  --task-done-bg: #2e7d32;
+  --task-done-color: #b2ffb2;
+}
+body.dark .task-form {
+  --taskform-bg: #23262c;
+  --input-bg: #16181c;
+  --input-color: #f5f7fa;
+}

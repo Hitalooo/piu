@@ -1,0 +1,52 @@
+.task-form {
+  background: var(--taskform-bg, #fff);
+  border-radius: 7px;
+  padding: 16px;
+  margin-bottom: 20px;
+  box-shadow: 0 1px 7px #0001;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.task-form-title,
+.task-form-desc {
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 8px;
+  font-size: 1rem;
+  margin-bottom: 4px;
+  background: var(--input-bg, #fafafa);
+  color: var(--input-color, #222);
+  transition: background 0.2s, color 0.2s;
+}
+.task-form-title:focus,
+.task-form-desc:focus {
+  outline: 2px solid #3085d6;
+}
+
+.task-form-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+}
+.task-form button {
+  padding: 5px 14px;
+  border: none;
+  border-radius: 5px;
+  background: #3085d6;
+  color: #fff;
+  font-size: 0.97em;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.task-form button:hover {
+  background: #1865b3;
+}
+.cancel-btn {
+  background: #d33;
+}
+.cancel-btn:hover {
+  background: #a00;
+}
