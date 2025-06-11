@@ -1,0 +1,124 @@
+body {
+  margin: 0;
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(120deg, #2563eb 0%, #60a5fa 100%);
+  min-height: 100vh;
+}
+
+.app-center-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.88);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
+  backdrop-filter: blur(6px);
+  border-radius: 18px;
+  padding: 2.5rem 2.5rem 2rem 2.5rem;
+  min-width: 350px;
+  max-width: 94vw;
+  border: 1px solid rgba(255,255,255,0.32);
+  transition: box-shadow 0.15s;
+}
+
+.glass-card h2 {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  color: #2563eb;
+  letter-spacing: 0.5px;
+  font-weight: 700;
+  text-align: center;
+}
+
+label {
+  font-size: 1rem;
+  color: #334155;
+  font-weight: 500;
+  letter-spacing: 0.1px;
+  display: block;
+  margin-top: 0.3rem;
+  margin-bottom: 0.4rem;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="date"] {
+  width: 100%;
+  margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
+  padding: 0.65rem 1rem;
+  border-radius: 7px;
+  border: 1.5px solid #cbd5e1;
+  background: #f1f5f9;
+  font-size: 1rem;
+  transition: border-color 0.15s, box-shadow 0.15s;
+  outline: none;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+input[type="date"]:focus {
+  border-color: #2563eb;
+  background: #fff;
+  box-shadow: 0 0 0 2px #60a5fa55;
+}
+
+button {
+  width: 100%;
+  padding: 0.75rem 0;
+  border: none;
+  border-radius: 7px;
+  font-size: 1.04rem;
+  font-weight: 600;
+  background: linear-gradient(90deg, #2563eb 0%, #60a5fa 100%);
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 0 2px 8px 0 rgba(31, 38, 135, 0.10);
+  letter-spacing: 0.2px;
+  transition: background 0.18s, transform 0.13s;
+}
+
+button:hover, button:focus {
+  background: linear-gradient(90deg, #1d4ed8 0%, #3b82f6 100%);
+  transform: scale(1.025);
+}
+
+.secondary-btn {
+  background: none;
+  color: #2563eb;
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-shadow: none;
+  letter-spacing: 0.1px;
+  cursor: pointer;
+  transition: color 0.16s;
+}
+
+.secondary-btn:hover, .secondary-btn:focus {
+  text-decoration: underline;
+  color: #1d4ed8;
+}
+
+.error-msg {
+  color: #dc2626;
+  margin-bottom: 1rem;
+  font-size: 0.98rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+@media (max-width: 430px) {
+  .glass-card {
+    min-width: unset;
+    padding: 1.3rem 0.5rem 1.6rem 0.5rem;
+  }
+}
