@@ -1,12 +1,16 @@
 import { useState } from 'react'
 
-const TodoForm = () => {
+const TodoForm = ({ addTodo }) => {
     const [value, setValue] = useState("");
     const [category, setCategory] = useState("");
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(value, category);
+        if (!value || !category) return;
+        addTodo(value, category);
+        // Limpa os campos após o envio
+        setValue("");
+        setCategory("");
     };
   return (
     <div className="todo-form">
