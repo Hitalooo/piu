@@ -38,7 +38,7 @@ function App() {
   const [sort, setSort] = useState("Asc")
   // useState para armazenar o texto pesquisado, o filtro e a ordenação
   const [darkMode, setDarkMode] = useState(false);
-  // Efeito para aplicar o modo escuro/claro ao carregar
+  // efeito para aplicar o modo escuro/claro ao carregar
   useEffect(() => {
   if (darkMode) {
     document.body.classList.add('dark-mode');
