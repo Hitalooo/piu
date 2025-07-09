@@ -9,7 +9,7 @@ import "./App.css";
 function App() {
   const [todos, setTodos] = useState([
     // Quase que uma "variável global"/lista do Python,  que consegue se mutar, para armazenar as tarefas
-    // Poderia ser substituído por um banco de dados ou API mas como não temos, está em memória mesmo
+    // poderia ser substituído por um banco de dados ou API mas como não temos, está em memória mesmo
     // o setTodos serve para atualizar o estado, e o useState para inicializar o estado
     // Não usei variável pois ela não renderiza novamente o componente quando é atualizada
     {
