@@ -8,7 +8,7 @@ const TodoForm = ({ addTodo }) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        //previne o comportamento padrão do formulário, que é recarregar a página
+        //previne o comportamento padrão do formulário
         if (!value || !category) return;
         // Se o valor do título ou da categoria estiver vazio, não faz nada
         addTodo(value, category);
