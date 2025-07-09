@@ -1,47 +1,48 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background-color: #F4F4F4;
+  min-height: 100vh;
   padding: 30px;
-  color: #333;
-  background-image: url('https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80');
-  /* COLOCAR UM BACKGROUND MELHOR AQUI */
+  margin: 0;
+  transition: all 0.3s ease;
 }
 
+/* modo claro */
+body.light-mode {
+  background: linear-gradient(135deg, #d4b6f5 0%, #e8b7f5 100%);
+  color: #333;
+}
+
+/* modo escuro */
+body.dark-mode {
+  background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+  color: #f1f1f1;
+}
+
+/* Container Principal */
 .app {
   max-width: 600px;
   margin: 0 auto;
-  background-color: #efefef;
   padding: 20px 30px;
   border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+body.light-mode .app {
+  background-color: #efefef;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+body.dark-mode .app {
+  background-color: #1a1a2e;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
 }
 
 h1 {
   text-align: center;
+  margin-bottom: 20px;
 }
 
-p {
-  margin: 10px 0;
-}
-
-input {
-  box-sizing: border-box;
-}
-
-button {
-  background-color: #333974;
-  color: #fff;
-  padding: 5px 10px;
-  border: none;
-  border-radius: 3px;
-  cursor: pointer;
-  opacity: 0.8;
-  transition: 0.3s;
-}
-
-button:hover {
-  opacity: 1;
-}
-
+/* Lista de Tarefas */
 .todo-list {
   margin-bottom: 20px;
   padding-bottom: 20px;
@@ -57,12 +58,38 @@ button:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  transition: all 0.3s ease;
 }
 
+body.dark-mode .todo {
+  background-color: #16213e;
+  color: #f1f1f1;
+}
+
+button {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  opacity: 0.8;
+  transition: 0.3s;
+  color: white;
+}
+
+button:hover {
+  opacity: 1;
+}
+
+body.light-mode button:not(.complete):not(.remove) {
+  background-color: #333974;
+}
+
+body.dark-mode button:not(.complete):not(.remove) {
+  background-color: #4a4e8d;
+}
 
 .complete {
   background-color: #5cb85c;
-
 }
 
 .remove {
@@ -73,15 +100,23 @@ button:hover {
   padding-bottom: 1.5rem;
 }
 
-input, 
-select {
+input, select {
   padding: 5px;
   margin-bottom: 10px;
   border: 1px solid #ddd;
   border-radius: 4px;
   width: 100%;
+  transition: all 0.3s ease;
 }
 
+body.dark-mode input,
+body.dark-mode select {
+  background-color: #2d3748;
+  color: #f1f1f1;
+  border-color: #4a5568;
+}
+
+/* filtros */
 .filter, .search {
   border-bottom: 1px solid #555;
   margin-bottom: 20px;
@@ -92,4 +127,35 @@ select {
   display: flex;
   justify-content: space-between;
   gap: 3rem;
+}
+
+.filter-options div {
+  flex: 1 1 0;
+}
+
+.filter-button {
+  margin-right: 10px;
+}
+
+/* botton do tema */
+.theme-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #333974;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  z-index: 1000;
+}
+
+body.dark-mode .theme-toggle {
+  background-color: #5cb85c;
 }
