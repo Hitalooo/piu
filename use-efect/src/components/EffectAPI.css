@@ -6,43 +6,48 @@
     margin-top: 2em;
   }
   
-  .table-block {
+  /* Cada bloco de tabela */
+  .tables-container > div {
     background: #fff;
     border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
     padding: 1em;
     min-width: 220px;
     flex: 1 1 220px;
     max-width: 340px;
   }
   
-  .table-block h2 {
+  /* Título de cada tabela */
+  .tables-container h2 {
     margin-top: 0;
     margin-bottom: 0.7em;
-    color: #333;
+    color: #0b6efd;
     font-size: 1.2em;
+    text-align: center;
   }
   
-  .table-block table {
+  /* Tabela */
+  .tables-container table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 0.5em;
   }
   
-  .table-block th,
-  .table-block td {
-    border: 1px solid #eee;
-    padding: 0.5em;
+  .tables-container th,
+  .tables-container td {
+    border: 1px solid #ebebeb;
+    padding: 0.5em 0.7em;
     text-align: left;
   }
   
-  .table-block th {
+  .tables-container th {
     background: #f7f7f7;
-    color: #555;
-    font-weight: 500;
+    color: #444;
+    font-weight: 600;
   }
   
-  .table-block button {
+  /* Botão de busca */
+  .tables-container button {
     margin-bottom: 0.7em;
     padding: 0.4em 1em;
     background: #0b6efd;
@@ -54,12 +59,12 @@
     transition: background 0.15s;
   }
   
-  .table-block button:disabled {
+  .tables-container button:disabled {
     background: #aaa;
     cursor: not-allowed;
   }
   
-  .table-block button:not(:disabled):hover {
+  .tables-container button:not(:disabled):hover {
     background: #084298;
   }
   
@@ -68,6 +73,10 @@
     flex-basis: 100%;
     max-width: 600px;
     margin: 2em auto 0 auto;
+    background: none;
+    box-shadow: none;
+    border-radius: 0;
+    padding: 0;
   }
   
   .tables-container form {
@@ -103,4 +112,6 @@
   .tables-container small {
     color: #888;
     font-size: 0.9em;
+    display: block;
+    margin-top: 0.3em;
   }

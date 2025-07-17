@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import "./EffectAPI.css"
 
 export default function EffectAPI({ trigger }) {
   const [users, setUsers] = useState([]);

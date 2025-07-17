@@ -1,12 +1,115 @@
 body {
-  font-family: 'Segoe UI', Arial, sans-serif;
-  background: #f9f9f9;
   margin: 0;
   padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f2f2f2;
 }
 
 h1 {
   text-align: center;
-  margin-top: 1.5rem;
   color: #222;
+  margin-top: 2em;
+  margin-bottom: 1em;
+  font-size: 2em;
+}
+
+form {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin-bottom: 2em;
+}
+
+input, button {
+  padding: 0.5em;
+  border-radius: 4px;
+  border: 1px solid #bbb;
+  font-size: 1em;
+}
+
+button {
+  background: #3498db;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.2s;
+}
+
+button:disabled {
+  background: #aaa;
+  cursor: not-allowed;
+}
+
+button:hover:not(:disabled) {
+  background: #217dbb;
+}
+
+.tables-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2em;
+  justify-content: center;
+  margin-top: 2em;
+}
+
+.table-block {
+  background: #fff;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  padding: 1em;
+  min-width: 200px;
+  flex: 1 1 200px;
+  max-width: 330px;
+}
+
+.table-block h2 {
+  margin: 0 0 0.7em 0;
+  color: #333;
+  font-size: 1.1em;
+}
+
+.table-block table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 0.5em;
+}
+
+.table-block th,
+.table-block td {
+  border: 1px solid #eee;
+  padding: 0.5em;
+  text-align: left;
+}
+
+.table-block th {
+  background: #f5f5f5;
+  color: #555;
+  font-weight: 500;
+}
+
+.table-block button {
+  margin-bottom: 0.7em;
+  padding: 0.4em 1em;
+}
+
+.tables-container form {
+  width: 100%;
+  margin-top: 2em;
+  justify-content: flex-start;
+}
+
+.tables-container input[type="text"] {
+  width: 60%;
+  border-radius: 4px;
+  border: 1px solid #bbb;
+  padding: 0.5em;
+  font-size: 1em;
+}
+
+.tables-container small {
+  color: #888;
+  font-size: 0.9em;
+  display: block;
+  margin-top: 0.3em;
 }
