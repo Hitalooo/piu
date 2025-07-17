@@ -1,0 +1,62 @@
+.tables-container {
+    display: flex;
+    gap: 2rem;
+    justify-content: space-around;
+    margin-top: 2rem;
+  }
+  
+  .table-block {
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 2px 8px #0002;
+    width: 220px;
+    min-height: 220px;
+  }
+  
+  .name-table {
+    background: #f0f8ff;
+    border: 2px solid #4a90e2;
+  }
+  .username-table {
+    background: #fff7e6;
+    border: 2px solid #ff9800;
+  }
+  .city-table {
+    background: #f3f7f3;
+    border: 2px solid #4caf50;
+  }
+  
+  .table-block h2 {
+    margin-top: 0;
+    margin-bottom: 0.5em;
+  }
+  
+  .table-block button {
+    margin-bottom: 1em;
+    padding: 6px 16px;
+    border-radius: 4px;
+    border: none;
+    background: #4a90e2;
+    color: white;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  .name-table button { background: #4a90e2; }
+  .username-table button { background: #ff9800; }
+  .city-table button { background: #4caf50; }
+  
+  .table-block button:disabled {
+    background: #aaa;
+    cursor: not-allowed;
+  }
+  
+  .table-block table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .table-block th, .table-block td {
+    border-bottom: 1px solid #ddd;
+    padding: 6px 0;
+    text-align: left;
+  }
