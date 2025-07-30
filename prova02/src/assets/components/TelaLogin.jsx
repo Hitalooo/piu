@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './TelaLogin.css';
 
 function TelaLogin() {
   const [login, setLogin] = useState('');
@@ -10,7 +11,7 @@ function TelaLogin() {
     if (senha === 'AlunoPIU') {
       setAcessoPermitido(true);
     } else {
-      alert('Senha incorreta!');
+      alert('senha incorreta');
       setAcessoPermitido(false);
     }
   };
@@ -20,7 +21,7 @@ function TelaLogin() {
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: acessoPermitido ? '#90ee90' : '#f0f0f0',
+    backgroundColor: acessoPermitido ? '#88e688' : '#ffffff',
     transition: 'background-color 0.5s',
   };
 
@@ -34,11 +35,12 @@ function TelaLogin() {
     gap: '1rem',
   };
 
+  //por algum motivo não carregou o CSS e fiiz em javascript mesmo
   return (
     <div style={estiloTela}>
       <form onSubmit={verificarSenha} style={estiloFormulario}>
         <label>
-          Login:
+          login:
           <input
             type="text"
             value={login}
