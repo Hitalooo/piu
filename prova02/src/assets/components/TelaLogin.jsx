@@ -44,8 +44,7 @@ function TelaLogin() {
           <input
             type="text"
             value={login}
-            onChange={(e) => setLogin(e.target.value)}
-          />
+            onChange={(e) => setLogin(e.target.value)}/>
         </label>
         <label>
           Palavra-passe:
